@@ -1,6 +1,6 @@
 <h2>Edit <%= @title %> page</h2>
 
 <%= render "form.html", changeset: @changeset,
-                        action: "/w/#{@title}" %>
+                        action: wiki_path(@conn, :update, @title) %>
 
 <%= link "Back", to: "/w/#{@title}" %>
