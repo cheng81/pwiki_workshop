@@ -38,5 +38,5 @@ config :pwiki, Pwiki.Repo,
   username: "postgres",
   password: "postgres",
   database: "pwiki_dev",
-  hostname: "localhost",
+  hostname: "192.168.99.100",
   pool_size: 10

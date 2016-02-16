@@ -1,0 +1,3 @@
+<%= link "Edit", to: "/w/#{@wiki_page.title}/edit" %>
+<h1><%= @wiki_page.title %></h1>
+<%= raw @wiki_page.body %>

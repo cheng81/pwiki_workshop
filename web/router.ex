@@ -17,6 +17,14 @@ defmodule Pwiki.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+
+    resources "/wiki_pages", WikiPageController
+    get "/w/:page_title/new", WikiController, :new
+    post "/w/:page_title/create", WikiController, :create
+    put "/w/:page_title", WikiController, :update
+    get "/w/:page_title/edit", WikiController, :edit
+    get "/w/:page_title", WikiController, :show
+    # put "/w/:page_title", WikiController :put
   end
 
   # Other scopes may use custom stacks.

@@ -1,0 +1,6 @@
+<h2>Edit <%= @title %> page</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: "/w/#{@title}" %>
+
+<%= link "Back", to: "/w/#{@title}" %>

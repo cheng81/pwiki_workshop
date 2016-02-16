@@ -1,0 +1,17 @@
+<h2>Show wiki page</h2>
+
+<ul>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @wiki_page.title %>
+  </li>
+
+  <li>
+    <%= raw Earmark.to_html(@wiki_page.body) %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: wiki_page_path(@conn, :edit, @wiki_page) %>
+<%= link "Back", to: wiki_page_path(@conn, :index) %>
